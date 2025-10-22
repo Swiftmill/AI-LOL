@@ -1,0 +1,168 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.chat-panel,
+.side-panel {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 40px rgba(2, 6, 23, 0.5);
+}
+
+.chat-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-log {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  margin-bottom: 1rem;
+}
+
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input-row input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(30, 41, 59, 0.9);
+  color: inherit;
+}
+
+.input-row button {
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-row button:hover {
+  background: #0ea5e9;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.toggle input {
+  accent-color: #38bdf8;
+}
+
+.side-panel {
+  flex: 1;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.panel {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.panel pre {
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.bubble {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.bubble.user {
+  border-left: 3px solid #38bdf8;
+}
+
+.bubble.bot {
+  border-left: 3px solid #a855f7;
+}
+
+.bubble strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #cbd5f5;
+}
+
+.bubble p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+a {
+  color: #38bdf8;
+  word-break: break-all;
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Locale</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="chat-panel">
+        <header>
+          <h1>AI Locale</h1>
+        </header>
+        <div id="chatLog" class="chat-log"></div>
+        <form id="chatForm" class="chat-form">
+          <label class="toggle">
+            <input type="checkbox" id="allowWeb" checked />
+            <span>Autoriser la recherche web</span>
+          </label>
+          <div class="input-row">
+            <input type="text" id="messageInput" placeholder="Posez votre question..." autocomplete="off" />
+            <button type="submit">Envoyer</button>
+          </div>
+        </form>
+      </section>
+      <aside class="side-panel">
+        <div class="panel" id="sourcesPanel">
+          <h2>Sources</h2>
+          <ul id="sourcesList"></ul>
+        </div>
+        <div class="panel" id="rulesPanel">
+          <h2>Règles</h2>
+          <ul id="rulesList"></ul>
+        </div>
+        <div class="panel" id="aliasesPanel">
+          <h2>Alias</h2>
+          <ul id="aliasesList"></ul>
+        </div>
+        <div class="panel" id="factsPanel">
+          <h2>Sujets</h2>
+          <ul id="factsList"></ul>
+        </div>
+        <div class="panel" id="memoryPanel">
+          <h2>Mémoire</h2>
+          <pre id="memoryView"></pre>
+        </div>
+      </aside>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
