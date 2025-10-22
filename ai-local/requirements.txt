@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+duckduckgo-search
+requests
+beautifulsoup4
+readability-lxml
+spacy
+sentence-transformers
+scikit-learn
+sumy
